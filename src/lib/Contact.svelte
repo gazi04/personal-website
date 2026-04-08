@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { person } from '$lib/data.ts';
 
   let name = '';

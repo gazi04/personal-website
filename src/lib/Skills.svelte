@@ -1,5 +1,5 @@
-<script>
   import { skills } from '$lib/data.ts';
+<script lang="ts">
 </script>
 
 <section class="section" id="skills">

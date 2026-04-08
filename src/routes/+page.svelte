@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import Nav from '$lib/Nav.svelte';
   import Hero from '$lib/Hero.svelte';
   import Experience from '$lib/Experience.svelte';

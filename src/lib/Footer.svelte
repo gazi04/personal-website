@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
   import { person } from '$lib/data.ts';
   const year = new Date().getFullYear();
 </script>

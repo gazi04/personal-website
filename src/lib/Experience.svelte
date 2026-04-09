@@ -2,38 +2,36 @@
   import { experience } from '$lib/data.ts';
 </script>
 
-<section class="py-24" id="experience">
+<section class="py-24 bg-[#f8f9fa]" id="experience">
   <div class="max-w-[1100px] mx-auto px-8">
 
-    <p class="flex items-center gap-3 font-['JetBrains_Mono'] text-xs text-[#e8a820] uppercase tracking-[0.15em] mb-4">
+    <p class="flex items-center gap-3 font-['JetBrains_Mono'] text-xs text-[#94a3b8] uppercase tracking-[0.15em] mb-4">
       02 / Experience
     </p>
-    <h2 class="font-['Syne'] font-extrabold text-[#f0ede8] mb-12 text-[clamp(2rem,5vw,3rem)]">
+    <h2 class="font-['DM_Sans'] font-extrabold text-[#0f172a] mb-12 text-[clamp(2rem,5vw,3rem)]">
       Where I've Built
     </h2>
 
-    <div class="flex flex-col gap-8">
+    <div class="flex flex-col gap-6">
       {#each experience as job, i}
-        <div class="grid grid-cols-[200px_1fr] max-sm:grid-cols-1 gap-8 pb-8 border-b border-[#2a2a2a] last:border-0">
+        <div class="bg-white rounded-xl border border-[#e2e8f0] shadow-sm p-8 grid grid-cols-[180px_1fr] max-sm:grid-cols-1 gap-8">
 
-          <div class="pt-1">
-            <span class="font-['JetBrains_Mono'] text-xs text-[#6b6866] tracking-wide">{job.period}</span>
+          <div class="pt-1 flex flex-col gap-2">
+            <span class="font-['JetBrains_Mono'] text-xs text-[#94a3b8] tracking-wide">{job.period}</span>
+            <span class="font-['DM_Sans'] text-[2rem] font-extrabold text-[#f1f5f9] leading-none max-sm:hidden">
+              0{i + 1}
+            </span>
           </div>
 
           <div class="flex flex-col gap-4">
-            <div class="flex justify-between items-start">
-              <div>
-                <h3 class="font-['Syne'] text-xl font-bold text-[#f0ede8] mb-1">{job.role}</h3>
-                <p class="font-['JetBrains_Mono'] text-xs text-[#e8a820]">{job.company}</p>
-              </div>
-              <span class="font-['JetBrains_Mono'] text-4xl font-extrabold text-[#3a3a3a] leading-none max-sm:hidden">
-                0{i + 1}
-              </span>
+            <div>
+              <h3 class="font-['DM_Sans'] text-xl font-bold text-[#0f172a] mb-1">{job.role}</h3>
+              <p class="font-['JetBrains_Mono'] text-xs text-[#64748b]">{job.company}</p>
             </div>
-            <p class="text-[0.95rem] text-[#a09d99] leading-[1.8]">{job.description}</p>
+            <p class="font-['Inter'] text-[0.95rem] text-[#334155] leading-[1.8]">{job.description}</p>
             <div class="flex flex-wrap gap-1.5">
               {#each job.tags as tag}
-                <span class="font-['JetBrains_Mono'] text-[0.7rem] px-2 py-0.5 bg-[#1a1a1a] border border-[#2a2a2a] text-[#a09d99] rounded">
+                <span class="font-['JetBrains_Mono'] text-[0.7rem] px-2.5 py-1 bg-[#f8f9fa] border border-[#e2e8f0] text-[#64748b] rounded-md">
                   {tag}
                 </span>
               {/each}

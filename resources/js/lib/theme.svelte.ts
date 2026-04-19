@@ -10,7 +10,7 @@ export type ThemeState = {
     updateAppearance: (value: Appearance) => void;
 };
 
-const appearance = $state<{ value: Appearance }>({ value: 'system' });
+const appearance = $state<{ value: Appearance }>({ value: 'light' });
 
 let themeChangeMediaQuery: MediaQueryList | null = null;
 
@@ -58,7 +58,7 @@ const getStoredAppearance = (): Appearance => {
 
     return stored === 'light' || stored === 'dark' || stored === 'system'
         ? stored
-        : 'system';
+        : 'light';
 };
 
 const handleSystemThemeChange = (): void => {
@@ -82,16 +82,17 @@ export function initializeTheme(): () => void {
         return () => {};
     }
 
-    if (!localStorage.getItem('appearance')) {
-        localStorage.setItem('appearance', 'system');
-        setCookie('appearance', 'system');
+    const stored = localStorage.getItem('appearance');
+    if (!stored || stored === 'system') {
+        localStorage.setItem('appearance', 'light');
+        setCookie('appearance', 'light');
     }
 
     appearance.value = getStoredAppearance();
     applyTheme(appearance.value);
 
     detachThemeChangeListener();
-    themeChangeMediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
+    themeChangeMediaQuery = window.matchMedia('(prefers-color-scheme: light)');
     themeChangeMediaQuery.addEventListener('change', handleSystemThemeChange);
 
     return detachThemeChangeListener;

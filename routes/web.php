@@ -1,7 +1,12 @@
 <?php
 
+use App\Http\Controllers\PortfolioController;
 use Illuminate\Support\Facades\Route;
 use Laravel\Fortify\Features;
+
+Route::controller(PortfolioController::class)->name('portfolio.')->group(function () {
+    Route::get('/home', 'index');
+});
 
 Route::inertia('/', 'Welcome', [
     'canRegister' => Features::enabled(Features::registration()),

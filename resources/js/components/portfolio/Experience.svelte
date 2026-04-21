@@ -23,7 +23,7 @@
                     <div class="pt-1 flex flex-col gap-2">
                         <span
                             class="font-['JetBrains_Mono'] text-xs text-[#94a3b8] tracking-wide"
-                            >{job.period}</span
+                            >{job.formatted_period}</span
                         >
                         <span
                             class="font-['DM_Sans'] text-[2rem] font-extrabold text-[#f1f5f9] leading-none max-sm:hidden"

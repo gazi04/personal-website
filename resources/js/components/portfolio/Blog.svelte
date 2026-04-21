@@ -43,8 +43,8 @@
                     <div
                         class="flex flex-col items-end gap-1 font-['JetBrains_Mono'] text-xs text-[#94a3b8] whitespace-nowrap"
                     >
-                        <span>{post.readTime}</span>
-                        <span>{post.date}</span>
+                        <span>{post.read_time} min</span>
+                        <span>{post.formatted_date}</span>
                     </div>
 
                     <span

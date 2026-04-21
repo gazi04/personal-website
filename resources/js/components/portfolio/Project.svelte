@@ -26,9 +26,9 @@
                             >0{i + 1}</span
                         >
                         <div class="flex gap-3">
-                            {#if project.github}
+                            {#if project.github_url}
                                 <a
-                                    href={project.github}
+                                    href={project.github_url}
                                     target="_blank"
                                     rel="noopener"
                                     title="GitHub"
@@ -46,9 +46,9 @@
                                     </svg>
                                 </a>
                             {/if}
-                            {#if project.live}
+                            {#if project.live_url}
                                 <a
-                                    href={project.live}
+                                    href={project.live_url}
                                     target="_blank"
                                     rel="noopener"
                                     title="Live"
@@ -78,7 +78,7 @@
                     <h3
                         class="font-['DM_Sans'] text-[1.3rem] font-bold text-[#0f172a] leading-tight"
                     >
-                        {project.name}
+                        {project.title}
                     </h3>
                     <p
                         class="font-['JetBrains_Mono'] text-xs text-[#94a3b8] tracking-wide"

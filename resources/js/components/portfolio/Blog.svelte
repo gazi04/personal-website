@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { blogPosts } = $props();
+    let { posts } = $props();
 </script>
 
 <section class="py-24 bg-white" id="blog">
@@ -16,7 +16,7 @@
         </h2>
 
         <div class="flex flex-col">
-            {#each blogPosts as post, i}
+            {#each posts as post, i}
                 <a
                     href={`/blog/${post.slug}`}
                     class="group grid grid-cols-[2.5rem_1fr_auto_auto] max-sm:grid-cols-[1fr_auto] items-center gap-6 py-7 px-4 border-b border-[#e2e8f0] first:border-t first:border-t-[#e2e8f0] rounded-lg transition-all duration-150 hover:bg-[#f8f9fa]"

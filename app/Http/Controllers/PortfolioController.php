@@ -18,7 +18,7 @@ class PortfolioController extends Controller
             'projects' => Project::where('is_visible', true)->orderBy('id')->get(),
             'experience' => Experience::orderBy('id')->get(),
             'skills' => Skill::orderBy('id')->get(),
-            'posts' => BlogPost::where('is_published', true)->latest()->get(),
+            'posts' => BlogPost::where('is_visible', true)->latest()->take(3)->get(),
         ]);
     }
 }

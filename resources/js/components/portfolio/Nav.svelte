@@ -1,5 +1,5 @@
 <script lang="ts">
-    let { scrolled, links } = $props();
+    let { scrolled, links, person } = $props();
 </script>
 
 <nav
@@ -12,7 +12,7 @@
             href="/"
             class="font-['DM_Sans'] font-extrabold text-lg text-[#0f172a] tracking-wide mr-auto"
         >
-            <span class="text-[#94a3b8]">{`{`}</span>AK<span
+            <span class="text-[#94a3b8]">{`{`}</span>{person.initial}<span
                 class="text-[#94a3b8]">{`}`}</span
             >
         </a>

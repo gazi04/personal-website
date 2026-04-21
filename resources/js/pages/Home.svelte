@@ -33,7 +33,7 @@
     />
 </svelte:head>
 
-<Nav {scrolled} {links} />
+<Nav {scrolled} {links} {person} />
 <main>
     <Hero {person} />
     <Experience {experience} />

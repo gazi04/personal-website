@@ -100,7 +100,7 @@
                 class="hidden lg:block font-['DM_Sans'] font-extrabold text-[#f1f5f9] select-none leading-none"
                 style="font-size: clamp(8rem, 15vw, 14rem);"
             >
-                AK
+                {person.initial}
             </div>
         </div>
     </div>

@@ -2,21 +2,21 @@
 
 namespace App\Filament\Resources\SiteSettings;
 
-use App\Filament\Resources\SiteSettings\Pages\CreateSiteSettings;
-use App\Filament\Resources\SiteSettings\Pages\EditSiteSettings;
+use App\Filament\Resources\SiteSettings\Pages\CreateSiteSetting;
+use App\Filament\Resources\SiteSettings\Pages\EditSiteSetting;
 use App\Filament\Resources\SiteSettings\Pages\ListSiteSettings;
-use App\Filament\Resources\SiteSettings\Schemas\SiteSettingsForm;
+use App\Filament\Resources\SiteSettings\Schemas\SiteSettingForm;
 use App\Filament\Resources\SiteSettings\Tables\SiteSettingsTable;
-use App\Models\SiteSettings;
+use App\Models\SiteSetting;
 use BackedEnum;
 use Filament\Resources\Resource;
 use Filament\Schemas\Schema;
 use Filament\Support\Icons\Heroicon;
 use Filament\Tables\Table;
 
-class SiteSettingsResource extends Resource
+class SiteSettingResource extends Resource
 {
-    protected static ?string $model = SiteSettings::class;
+    protected static ?string $model = SiteSetting::class;
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
@@ -24,7 +24,7 @@ class SiteSettingsResource extends Resource
 
     public static function form(Schema $schema): Schema
     {
-        return SiteSettingsForm::configure($schema);
+        return SiteSettingForm::configure($schema);
     }
 
     public static function table(Table $table): Table
@@ -43,8 +43,8 @@ class SiteSettingsResource extends Resource
     {
         return [
             'index' => ListSiteSettings::route('/'),
-            'create' => CreateSiteSettings::route('/create'),
-            'edit' => EditSiteSettings::route('/{record}/edit'),
+            'create' => CreateSiteSetting::route('/create'),
+            'edit' => EditSiteSetting::route('/{record}/edit'),
         ];
     }
 }

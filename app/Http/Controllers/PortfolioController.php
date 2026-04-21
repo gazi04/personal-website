@@ -15,10 +15,10 @@ class PortfolioController extends Controller
     {
         return Inertia::render('Home', [
             'person' => SiteSetting::all()->pluck('value', 'key'),
-            'projects' => Project::where('is_visible', true)->orderBy('order')->get(),
-            'experience' => Experience::orderBy('order')->get(),
-            'skills' => Skill::orderBy('order')->get(),
-            'posts' => BlogPost::where('is_visible', true)->latest()->take(3)->get(),
+            'projects' => Project::visible()->get(),
+            'experience' => Experience::visible()->get(),
+            'skills' => Skill::ordered()->get(),
+            'posts' => BlogPost::published()->take(3)->get(),
         ]);
     }
 }

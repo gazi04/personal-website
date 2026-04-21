@@ -15,10 +15,17 @@ class BlogPost extends Model
     /** @use HasFactory<BlogPostFactory> */
     use HasFactory;
 
+    protected $appends = ['formatted_date'];
+
     protected $casts = [
         'is_visible' => 'boolean',
         'published_at' => 'datetime',
     ];
+
+    protected function getFormattedDateAttribute(): string
+    {
+        return $this->published_at?->format('M d, Y') ?? 'Draft';
+    }
 
     public function scopePublished($query)
     {

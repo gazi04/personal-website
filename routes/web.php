@@ -6,6 +6,7 @@ use Laravel\Fortify\Features;
 
 Route::controller(PortfolioController::class)->name('portfolio.')->group(function () {
     Route::get('/home', 'index');
+    Route::get('/blog/{slug}', 'post');
 });
 
 Route::inertia('/', 'Welcome', [

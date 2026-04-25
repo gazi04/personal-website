@@ -21,4 +21,16 @@ class PortfolioController extends Controller
             'posts' => BlogPost::published()->take(3)->get(),
         ]);
     }
+
+    public function post(string $slug)
+    {
+        $post = BlogPost::published()
+            ->where('slug', $slug)
+            ->firstOrFail();
+
+        return Inertia::render('BlogPost', [
+            'post' => $post,
+            'person' => SiteSetting::all()->pluck('value', 'key')
+        ]);
+    }
 }

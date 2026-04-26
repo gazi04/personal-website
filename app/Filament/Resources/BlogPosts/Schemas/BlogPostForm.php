@@ -4,8 +4,8 @@ namespace App\Filament\Resources\BlogPosts\Schemas;
 
 use Filament\Forms\Components\DateTimePicker;
 use Filament\Forms\Components\FileUpload;
+use Filament\Forms\Components\MarkdownEditor;
 use Filament\Forms\Components\TextInput;
-use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\Toggle;
 use Filament\Schemas\Schema;
 
@@ -21,7 +21,7 @@ class BlogPostForm
                     ->required(),
                 TextInput::make('summary')
                     ->required(),
-                Textarea::make('body')
+                MarkdownEditor::make('body')
                     ->required()
                     ->columnSpanFull(),
                 TextInput::make('read_time')

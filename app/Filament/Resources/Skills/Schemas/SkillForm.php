@@ -2,8 +2,8 @@
 
 namespace App\Filament\Resources\Skills\Schemas;
 
-use Filament\Forms\Components\TextInput;
 use Filament\Forms\Components\Textarea;
+use Filament\Forms\Components\TextInput;
 use Filament\Schemas\Schema;
 
 class SkillForm

@@ -30,7 +30,7 @@ class PortfolioController extends Controller
 
         return Inertia::render('BlogPost', [
             'post' => $post,
-            'person' => SiteSetting::all()->pluck('value', 'key')
+            'person' => SiteSetting::all()->pluck('value', 'key'),
         ]);
     }
 }

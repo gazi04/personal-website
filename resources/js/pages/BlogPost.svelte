@@ -29,7 +29,7 @@
 <main class="min-h-screen bg-white pt-32 pb-24">
   <div class="max-w-[720px] mx-auto px-8">
 
-    <a href="/home"
+    <a href="/"
        class="inline-flex items-center gap-2 font-['JetBrains_Mono'] text-xs text-[#94a3b8] tracking-wide transition-colors duration-150 hover:text-[#0f172a] mb-12">
       ← Back
     </a>
